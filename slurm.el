@@ -53,4 +53,8 @@
   (interactive (list (thing-at-point 'symbol)))
   (shell-command (format "sinfo -p %s" partition)))
 
+(defun slurm-node-information ()
+  (interactive)
+  (shell-command "scontrol show node"))
+
 (provide 'slurm)
